@@ -1,0 +1,6 @@
+[
+        { "id": 1, "date": "2024-04-15", "module": "dev api" ,"attendence": ["keltoum idhssou"]},
+        { "id": 2, "date": "2024-04-5", "module": "devops" ,"attendence": ["younes belmadani","younes kaddache"]},
+        { "id": 3, "date": "2024-04-13", "module": "module 1" ,"attendence": ["kewoly","keltoum idhssou","younes belmadani"]},
+        { "id": 4, "date": "2024-04-10", "module": "module 2" ,"attendence": ["kewoly","keltoum idhssou","younes belmadani"]}
+    ]

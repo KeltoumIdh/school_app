@@ -1,0 +1,6 @@
+[
+    { "id": 1, "student": "keltoum idhssou", "exam": "soutenance" ,"notes": "20"},
+    { "id": 2, "student": "kewoly", "exam": "pfe" ,"notes": "18" },
+    { "id": 3, "student": "younes belmadani", "exam": "exam 1" ,"notes": "16"},
+    { "id": 4, "student": "el mehdi kachour", "exam": "exam 1" ,"notes": "10"}
+]

@@ -1,0 +1,7 @@
+[
+
+        { "id": 1, "examName": "Midterm Exam", "date": "2024-04-15" ,"time":"15:30", "duration":"60 min"},
+        { "id": 2, "examName": "Final Exam", "date": "2024-04-12" ,"time":"8:30", "duration":"60 min"},
+        { "id": 3, "examName": "Soutenance", "date": "2024-04-17" ,"time":"9:30", "duration":"60 min"}
+
+]
