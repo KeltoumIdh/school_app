@@ -5,10 +5,10 @@ const Profile = () => {
     const { user, setUser } = useUserStore(); // Destructure setUser from the store
 
     const [userr, setUserr] = useState({
-        name: user.name ? user.name : "keltoum",
-        email: user.email ? user.email : "keltoumidhssou@gmail.com",
-        password: user.password ? user.password : "123456",
-        role: user.role ? user.role : "teacher",
+        name: user?.name ? user?.name : "keltoum",
+        email: user?.email ? user?.email : "keltoumidhssou@gmail.com",
+        password: user?.password ? user?.password : "123456",
+        role: user?.role ? user?.role : "teacher",
     });
 
     const handleInputChange = (e) => {
