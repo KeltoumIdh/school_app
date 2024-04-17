@@ -1,0 +1,136 @@
+{
+    "modules": [
+      {
+        "id": 1,
+        "title": "Introduction to Computer Science",
+        "description": "This introductory course covers fundamental concepts in computer science, including algorithms, data structures, and programming principles. Students will gain hands-on experience through practical exercises and projects.",
+        "schedule": {
+          "days": ["Monday", "Wednesday", "Friday"],
+          "time": "9:00 AM - 11:00 AM",
+          "location": "Room 101"
+        },
+        "documents": [
+          {
+            "title": "Course Syllabus",
+            "type": "PDF",
+            "link": "https://example.com/syllabus_cs101.pdf"
+          },
+          {
+            "title": "Assignment 1",
+            "type": "PDF",
+            "link": "https://example.com/assignment1_cs101.pdf"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "French Literature: 19th Century",
+        "description": "Explore the rich literary landscape of 19th-century French literature, focusing on key authors and literary movements of the period. This course includes readings, discussions, and critical analysis of literary works.",
+        "schedule": {
+          "days": ["Tuesday", "Thursday"],
+          "time": "1:00 PM - 3:00 PM",
+          "location": "Room 205"
+        },
+        "documents": [
+          {
+            "title": "Reading List",
+            "type": "Text",
+            "link": "https://example.com/readinglist_literature.pdf"
+          },
+          {
+            "title": "Essay Guidelines",
+            "type": "PDF",
+            "link": "https://example.com/essay_guidelines.pdf"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Introduction to Physics",
+        "description": "This course introduces students to the fundamental principles of physics, including mechanics, electromagnetism, and thermodynamics. Through lectures, experiments, and problem-solving, students will develop a solid foundation in physics.",
+        "schedule": {
+          "days": ["Monday", "Wednesday", "Friday"],
+          "time": "10:00 AM - 12:00 PM",
+          "location": "Room 103"
+        },
+        "documents": [
+          {
+            "title": "Physics Textbook",
+            "type": "PDF",
+            "link": "https://example.com/textbook_physics.pdf"
+          },
+          {
+            "title": "Lab Manual",
+            "type": "PDF",
+            "link": "https://example.com/lab_manual_physics.pdf"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Art History: Renaissance",
+        "description": "Explore the art and culture of the Renaissance period, focusing on key artists, artworks, and historical contexts. This course combines lectures, discussions, and visits to art museums to provide students with a comprehensive understanding of the Renaissance.",
+        "schedule": {
+          "days": ["Tuesday", "Thursday"],
+          "time": "2:00 PM - 4:00 PM",
+          "location": "Room 210"
+        },
+        "documents": [
+          {
+            "title": "Art History Textbook",
+            "type": "PDF",
+            "link": "https://example.com/textbook_art_history.pdf"
+          },
+          {
+            "title": "Museum Visits Schedule",
+            "type": "Text",
+            "link": "https://example.com/museum_visits_schedule.txt"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Introduction to Psychology",
+        "description": "This course provides an overview of the field of psychology, covering topics such as cognition, behavior, and mental processes. Through lectures, case studies, and discussions, students will gain insight into the complexities of human behavior.",
+        "schedule": {
+          "days": ["Monday", "Wednesday", "Friday"],
+          "time": "11:00 AM - 1:00 PM",
+          "location": "Room 105"
+        },
+        "documents": [
+          {
+            "title": "Psychology Textbook",
+            "type": "PDF",
+            "link": "https://example.com/textbook_psychology.pdf"
+          },
+          {
+            "title": "Case Studies",
+            "type": "PDF",
+            "link": "https://example.com/case_studies_psychology.pdf"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Environmental Science",
+        "description": "This course explores the interrelationships between humans and the environment, focusing on topics such as sustainability, pollution, and conservation. Through lectures, field trips, and hands-on activities, students will develop an understanding of environmental issues and solutions.",
+        "schedule": {
+          "days": ["Tuesday", "Thursday"],
+          "time": "10:00 AM - 12:00 PM",
+          "location": "Room 202"
+        },
+        "documents": [
+          {
+            "title": "Environmental Science Textbook",
+            "type": "PDF",
+            "link": "https://example.com/textbook_environmental_science.pdf"
+          },
+          {
+            "title": "Field Trip Schedule",
+            "type": "Text",
+            "link": "https://example.com/field_trip_schedule.txt"
+          }
+        ]
+      }
+    ]
+  }

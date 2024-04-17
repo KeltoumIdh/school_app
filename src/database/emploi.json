@@ -1,0 +1,74 @@
+[
+    {
+      "day": "2024-04-24",
+      "startTime": "09:00 AM",
+      "endTime": "11:00 AM",
+      "subject": "Mathematics",
+      "teacher": "Mr. Smith",
+      "room": "Room 101"
+    },
+    {
+      "day": "2024-04-25",
+      "startTime": "11:30 AM",
+      "endTime": "01:30 PM",
+      "subject": "Physics",
+      "teacher": "Ms. Johnson",
+      "room": "Room 102"
+    },
+    {
+      "day": "2024-04-10",
+      "startTime": "09:00 AM",
+      "endTime": "11:00 AM",
+      "subject": "Chemistry",
+      "teacher": "Dr. Brown",
+      "room": "Room 103"
+    },
+    {
+      "day": "2024-04-08",
+      "startTime": "09:00 AM",
+      "endTime": "11:00 AM",
+      "subject": "Chemistry",
+      "teacher": "Dr. Brown",
+      "room": "Room 103"
+    },
+    {
+      "day": "2024-04-09",
+      "startTime": "09:00 AM",
+      "endTime": "11:00 AM",
+      "subject": "Chemistry",
+      "teacher": "Dr. Brown",
+      "room": "Room 103"
+    },
+    {
+      "day": "2024-04-17",
+      "startTime": "09:00 AM",
+      "endTime": "11:00 AM",
+      "subject": "Biology",
+      "teacher": "Mrs. Lee",
+      "room": "Room 104"
+    },
+    {
+      "day": "2024-04-18",
+      "startTime": "09:00 AM",
+      "endTime": "11:00 AM",
+      "subject": "History",
+      "teacher": "Mr. Davis",
+      "room": "Room 105"
+    },
+    {
+      "day": "2024-04-19",
+      "startTime": "11:30 AM",
+      "endTime": "01:30 PM",
+      "subject": "Geography",
+      "teacher": "Ms. Garcia",
+      "room": "Room 106"
+    },
+    {
+      "day": "2024-04-23",
+      "startTime": "09:00 AM",
+      "endTime": "11:00 AM",
+      "subject": "English",
+      "teacher": "Mr. Wilson",
+      "room": "Room 107"
+    }
+  ]

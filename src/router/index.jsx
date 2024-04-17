@@ -9,6 +9,13 @@ import AddModule from "../pages/TeacherDashboard/AddModule";
 import AddExam from "../pages/TeacherDashboard/AddExam";
 import ExamNotes from "../pages/TeacherDashboard/ExamNotes";
 import AttendanceTracking from "../pages/TeacherDashboard/AttendanceTracking";
+import PrivateRoute from "./privateRoute";
+import Login from "../components/auth/login";
+import Register from "../components/auth/register";
+import Profile from "../pages/Profile";
+import Settings from "../pages/Settings";
+import FetchData from "../pages/FetchData";
+import SingleProduct from "../pages/SingleProduct";
 
 export const router = createBrowserRouter([
   {
@@ -17,35 +24,63 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: <PrivateRoute element={<Home />} />,
       },
       {
         path: "/calendar",
-        element: <Calendar />,
+        element: <PrivateRoute element={<Calendar />} />,
       },
       {
         path: "/teacher-dashboard",
-        element: <TeacherDashboard />,
+        element: <PrivateRoute element={<TeacherDashboard />} />,
       },
       {
         path: "/teacher-dashboard/add-module",
-        element: <AddModule />,
+        element: <PrivateRoute element={<AddModule />} />,
       },
       {
         path: "/teacher-dashboard/add-exam",
-        element: <AddExam />,
+        element: <PrivateRoute element={<AddExam />} />,
       },
       {
         path: "/teacher-dashboard/exam-notes",
-        element: <ExamNotes />,
+        element: <PrivateRoute element={<ExamNotes />} />,
       },
       {
         path: "/teacher-dashboard/attendance-tracking",
-        element: <AttendanceTracking />,
+        element: <PrivateRoute element={<AttendanceTracking />} />,
+      },
+      {
+        path: "/profile",
+        element: <PrivateRoute element={<Profile />} />,
+      },
+      {
+        path: "/settings",
+        element: <PrivateRoute element={<Settings />} />,
+      },
+      {
+        path: "/module",
+        element: <PrivateRoute element={<FetchData />} />,
+      },
+      {
+        path: "/module/:id",
+        element: <PrivateRoute element={<SingleProduct />} />,
       },
       {
         path: "*",
-        element: <NotFound />,
+        element: <Login />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+      {
+        path: "/home",
+        element: <PrivateRoute element={<Home />} />, // Utilisez le composant PrivateRoute pour la route "/home"
       },
     ],
   },

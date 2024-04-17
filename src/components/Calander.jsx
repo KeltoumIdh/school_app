@@ -1,52 +1,81 @@
 import React from "react";
-import Fullcalendar from "@fullcalendar/react";
+import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
+import exams from "../database/exams.json";
+import useUserStore from '../store/userStore';
+import schedule from "../database/emploi.json";
 import modules from "../database/modules.json";
 
 function Calendar() {
+    const { user } = useUserStore();
+
     const handleDateClick = (arg) => {
         alert(arg.dateStr)
-      }
-      const moduleEvents = modules.map((module) => {
-        const startDate = new Date(module.startDate);
+    };
 
-        const endDate = new Date(startDate);
-        endDate.setDate(endDate.getDate() + module.days);
-        return {
+    // Logic for generating events based on user role
+    const getEvents = () => {
+        if (user?.role === "teacher") {
+          return modules.map((module) => ({
             title: module.moduleName,
-            start: startDate,
-            end: endDate,
+            start: new Date(module.startDate),
+            end: new Date(new Date(module.startDate).setDate(new Date(module.startDate).getDate() + module.days)),
             color: module.color
-        };
-    });
-  return (
-    <div>
-      <Fullcalendar
-        plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-        initialView={"dayGridMonth"}
-        headerToolbar={{
-          start: "today prev,next", // will normally be on the left. if RTL, will be on the right
-          center: "title",
-          end: "dayGridMonth,timeGridWeek,timeGridDay", // will normally be on the right. if RTL, will be on the left
-        }}
-        height={"90vh"}
-        // weekends={false}
-        events={moduleEvents}
-        dateClick={handleDateClick}
-        eventContent={renderEventContent}
-      />
-    </div>
-  );
+        }));
+        } else if (user?.role === "student") {
+            // For students, display exams and schedule
+            const examEvents = exams.map((exam) => ({
+                title: `Exam: ${exam.examName}`,
+                start: new Date(exam.date),
+                allDay: true,
+                color: 'red'
+            }));
+            // Add schedule events here if available for students
+            const scheduleEvents = schedule.map((item) => ({
+                title: `${item.subject} (${item.teacher})`,
+                start: item.day,
+                end: item.day,
+                color: "#3788D8",
+            }));
+            return [...examEvents, ...scheduleEvents];
+        } else {
+            // Default case: no events
+            return modules.map((module) => ({
+              title: module.moduleName,
+              start: new Date(module.startDate),
+              end: new Date(new Date(module.startDate).setDate(new Date(module.startDate).getDate() + module.days)),
+              color: module.color
+          }));
+        }
+    };
+
+    return (
+        <div>
+            <FullCalendar
+                plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+                initialView={"dayGridMonth"}
+                headerToolbar={{
+                    start: "today prev,next",
+                    center: "title",
+                    end: "dayGridMonth,timeGridWeek,timeGridDay",
+                }}
+                height={"90vh"}
+                events={getEvents()}
+                dateClick={handleDateClick}
+                eventContent={renderEventContent}
+            />
+        </div>
+    );
 }
 
 export default Calendar;
+
 function renderEventContent(eventInfo) {
     return(
-      <>
-        <b>{eventInfo.timeText}</b>
-        <i>{eventInfo.event.title}</i>
-      </>
-    )
-  }
+        <>
+            <i>{eventInfo.event.title}</i>
+        </>
+    );
+}
